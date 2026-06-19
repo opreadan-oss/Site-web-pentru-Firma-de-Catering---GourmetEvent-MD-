@@ -1,0 +1,670 @@
+/* ============================================================
+   GourmetEvent MD — style.css
+   Bootstrap 5.3.0 + custom overrides
+   ============================================================ */
+
+/* --- Variables --- */
+:root {
+    --gold: #C9A84C;
+    --gold-light: #e6c96a;
+    --dark: #1a1a1a;
+    --dark2: #222;
+    --gray-bg: #f7f7f7;
+    --border: #e0e0e0;
+    --muted: #666;
+    --white: #fff;
+  }
+  
+  /* --- Base --- */
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #222;
+    background: #fff;
+  }
+  
+  a { text-decoration: none; }
+  
+  /* ============================================================
+     NAVBAR
+     ============================================================ */
+  .navbar {
+    background: #fff !important;
+    border-bottom: 1px solid var(--border);
+    padding: 14px 0;
+  }
+  
+  .navbar-brand {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--dark) !important;
+    letter-spacing: 0.3px;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 14px;
+    font-weight: 500;
+    color: #444 !important;
+    padding: 6px 14px !important;
+    transition: color 0.2s;
+  }
+  
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link.active {
+    color: var(--gold) !important;
+  }
+  
+  /* ============================================================
+     BUTTONS
+     ============================================================ */
+  .btn-gold {
+    background-color: var(--gold);
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 11px 28px;
+    border-radius: 5px;
+    transition: background 0.2s;
+  }
+  .btn-gold:hover { background-color: var(--gold-light); color: #fff; }
+  
+  .btn-outline-white {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px 26px;
+    border-radius: 5px;
+    transition: all 0.2s;
+  }
+  .btn-outline-white:hover { background: #fff; color: var(--dark); }
+  
+  .btn-dark-custom {
+    background-color: var(--dark);
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 11px 28px;
+    border-radius: 5px;
+    transition: background 0.2s;
+  }
+  .btn-dark-custom:hover { background-color: #333; color: #fff; }
+  
+  /* ============================================================
+     SECTION UTILITIES
+     ============================================================ */
+  .section-title {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--dark);
+  }
+  
+  .section-sub {
+    font-size: 14px;
+    color: var(--muted);
+  }
+  
+  .gold-divider {
+    width: 48px;
+    height: 3px;
+    background: var(--gold);
+    margin: 10px auto 0;
+    border-radius: 2px;
+  }
+  
+  .text-gold { color: var(--gold) !important; }
+  .bg-dark-custom { background-color: var(--dark) !important; }
+  
+  /* ============================================================
+     HERO (index.html)
+     ============================================================ */
+  .hero {
+    position: relative;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    color: #fff;
+    background: #111;
+  }
+  
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  
+  .hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.55;
+    display: block;
+  }
+  
+  /* Placeholder when no image */
+  .hero-bg-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    font-size: 13px;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 80px 20px;
+  }
+  
+  .hero-content h1 {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 14px;
+    text-shadow: 0 2px 10px rgba(0,0,0,.5);
+  }
+  
+  .hero-content p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+  }
+  
+  /* ============================================================
+     PREZENTARE FIRMA (index.html)
+     ============================================================ */
+  .firma-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+  
+  .firma-img-placeholder {
+    width: 100%;
+    height: 220px;
+    background: #ddd;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 13px;
+    text-align: center;
+    padding: 16px;
+  }
+  
+  .oferta-banner {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px 32px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.06);
+  }
+  
+  .oferta-banner h3 {
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--dark);
+  }
+  
+  /* ============================================================
+     SERVICII PAGE
+     ============================================================ */
+  .page-header {
+    padding: 52px 0 20px;
+    text-align: center;
+  }
+  
+  .page-header h1 {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--dark);
+  }
+  
+  .serviciu-card {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,.05);
+    transition: box-shadow 0.2s;
+  }
+  
+  .serviciu-card:hover { box-shadow: 0 6px 22px rgba(0,0,0,.10); }
+  .serviciu-card.featured { border: 2px solid var(--gold); }
+  
+  .serviciu-card .card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .serviciu-card .img-placeholder {
+    width: 100%;
+    height: 180px;
+    background: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-size: 12px;
+    text-align: center;
+    padding: 12px;
+  }
+  
+  .serviciu-num {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+  }
+  
+  .serviciu-features li {
+    font-size: 13px;
+    color: #444;
+    padding-left: 18px;
+    position: relative;
+    margin-bottom: 5px;
+  }
+  
+  .serviciu-features li::before {
+    content: "✓";
+    color: var(--gold);
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+  }
+  
+  /* ============================================================
+     MENIU PAGE
+     ============================================================ */
+  .meniu-card {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,.04);
+    transition: box-shadow 0.2s;
+    display: flex;
+  }
+  
+  .meniu-card:hover { box-shadow: 0 6px 20px rgba(0,0,0,.09); }
+  .meniu-card.featured { border: 2px solid var(--gold); }
+  
+  .meniu-card .meniu-img {
+    width: 130px;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  
+  .meniu-card .meniu-img-placeholder {
+    width: 130px;
+    flex-shrink: 0;
+    background: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-size: 11px;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .meniu-body { padding: 16px 20px; }
+  
+  .meniu-body h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  
+  .meniu-body p {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 8px;
+  }
+  
+  .meniu-price {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+  
+  .meniu-tags { font-size: 12px; color: #888; }
+  
+  /* ============================================================
+     GALERIE PAGE
+     ============================================================ */
+  .galerie-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+    cursor: pointer;
+  }
+  
+  .galerie-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.35s;
+    display: block;
+  }
+  
+  .galerie-item.tall img { height: 456px; }
+  
+  .galerie-item:hover img { transform: scale(1.05); }
+  
+  .galerie-item .img-placeholder {
+    width: 100%;
+    height: 220px;
+    background: #bbb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    font-size: 12px;
+    text-align: center;
+    padding: 12px;
+  }
+  
+  .galerie-item.tall .img-placeholder { height: 456px; }
+  
+  .galerie-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,.65) 0%, transparent 55%);
+    display: flex;
+    align-items: flex-end;
+    padding: 14px;
+    pointer-events: none;
+  }
+  
+  .galerie-overlay span {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    background: rgba(0,0,0,.3);
+    padding: 4px 10px;
+    border-radius: 3px;
+    backdrop-filter: blur(2px);
+  }
+  
+  /* ============================================================
+     OFERTA PAGE — Pachete
+     ============================================================ */
+  .pachet-card {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,.06);
+    height: 100%;
+  }
+  
+  .pachet-card.premium {
+    background: var(--dark);
+    color: #fff;
+    border-color: var(--dark);
+  }
+  
+  .pachet-card h3 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+  
+  .pachet-price {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--gold);
+    margin-bottom: 4px;
+    line-height: 1.2;
+  }
+  
+  .pachet-price small {
+    font-size: 13px;
+    font-weight: 400;
+    color: #888;
+  }
+  
+  .pachet-card.premium .pachet-price small { color: #aaa; }
+  
+  .pachet-features {
+    list-style: none;
+    padding: 0;
+    margin: 18px 0 24px;
+  }
+  
+  .pachet-features li {
+    font-size: 13px;
+    color: #444;
+    padding: 4px 0 4px 20px;
+    position: relative;
+    line-height: 1.5;
+  }
+  
+  .pachet-card.premium .pachet-features li { color: #ccc; }
+  
+  .pachet-features li::before {
+    content: "✓";
+    color: var(--gold);
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+  }
+  
+  /* ============================================================
+     CONTACT FORM
+     ============================================================ */
+  .contact-form-section {
+    background: var(--gray-bg);
+    padding: 60px 0;
+  }
+  
+  .form-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .form-control, .form-select {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px 14px;
+    font-size: 14px;
+    color: #333;
+    background: #fff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  
+  .form-control:focus, .form-select:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(201,168,76,.15);
+    outline: none;
+  }
+  
+  /* ============================================================
+     MAP SECTION
+     ============================================================ */
+  .map-wrapper {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    height: 300px;
+    background: #e8e0d0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+  
+  .map-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+  
+  .map-links { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+  
+  .map-link {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+  }
+  .map-link:hover { background: var(--gold); color: #fff; }
+  
+  /* ============================================================
+     FOOTER
+     ============================================================ */
+  .site-footer {
+    background: var(--dark);
+    color: #ccc;
+    padding: 52px 0 24px;
+  }
+  
+  .footer-logo {
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+  
+  .footer-tagline {
+    font-size: 11px;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-bottom: 12px;
+  }
+  
+  .footer-desc {
+    font-size: 13px;
+    color: #aaa;
+    line-height: 1.7;
+  }
+  
+  .footer-heading {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+    margin-bottom: 14px;
+  }
+  
+  .footer-link {
+    display: block;
+    font-size: 13px;
+    color: #aaa;
+    line-height: 2;
+    transition: color 0.2s;
+  }
+  .footer-link:hover { color: var(--gold); }
+  
+  .footer-text {
+    font-size: 13px;
+    color: #aaa;
+    line-height: 2;
+  }
+  
+  .footer-divider {
+    border-color: #333;
+    margin: 32px 0 18px;
+  }
+  
+  .footer-copy {
+    font-size: 12px;
+    color: #555;
+    text-align: center;
+  }
+  
+  /* ============================================================
+     RESPONSIVE TWEAKS
+     ============================================================ */
+  @media (max-width: 768px) {
+    .hero-content h1 { font-size: 26px; }
+    .meniu-card { flex-direction: column; }
+    .meniu-card .meniu-img,
+    .meniu-card .meniu-img-placeholder { width: 100%; height: 160px; }
+    .galerie-item.tall img { height: 220px; }
+    .galerie-item.tall .img-placeholder { height: 220px; }
+    .pachet-card { margin-bottom: 20px; }
+  }
+  /* ============================================================
+   GALERIE FOTO STYLES (FIGMA EFFECT)
+   ============================================================ */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  height: 100%;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.col-md-6 .gallery-img {
+  height: 380px;
+}
+
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(26, 26, 26, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-category {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 4px;
+  transform: translateY(20px);
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover .gallery-img {
+  transform: scale(1.06);
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-item:hover .gallery-category {
+  transform: translateY(0);
+}
